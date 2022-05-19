@@ -7,7 +7,7 @@
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
 
-	<name>employee</name>
+	<name>employee-dev-app</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -38,8 +38,9 @@
 						<workerType>Micro</workerType>
 						<environment>Sandbox</environment>
 						<muleVersion>4.4.0</muleVersion>
+						<region>us-east-1</region>
 						<objectStoreV2>true</objectStoreV2>
-						<applicationName>employee</applicationName>
+						<applicationName>employee-dev-app</applicationName>
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>
