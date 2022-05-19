@@ -39,7 +39,7 @@
 						<environment>Sandbox</environment>
 						<muleVersion>4.4.0</muleVersion>
 						<objectStoreV2>true</objectStoreV2>
-						<applicationName>mulesoft-jenkins</applicationName>
+						<applicationName>employee</applicationName>
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>
