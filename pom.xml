@@ -7,7 +7,7 @@
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
 
-	<name>employee</name>
+	<name>employee-dev-app8286</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -29,6 +29,20 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
+				<configuration>
+					<cloudHubDeployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<username>sameersomaiyaa</username>
+						<password>Wondar@828640</password>
+						<workers>1</workers>
+						<workerType>Micro</workerType>
+						<environment>Sandbox</environment>
+						<muleVersion>4.4.0</muleVersion>
+						<region>us-east-1</region>
+						<objectStoreV2>true</objectStoreV2>
+						<applicationName>employee-dev-app8286</applicationName>
+					</cloudHubDeployment>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
