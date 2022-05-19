@@ -1,0 +1,50 @@
+#%RAML 1.0
+title: employee
+
+securitySchemes:
+  basic:
+    type: Basic Authentication
+    description: secure
+
+resourceTypes:
+  col: !include resourceType.raml
+
+
+
+/employee:
+  get:
+    securedBy: [basic]
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+                "emp_name":"xxxx",
+                "emp_id":"xxxx"
+              }
+  post:
+    securedBy: [basic]
+    body:
+      application/json:
+        example:
+          {
+            "emp_name":"xxxx",
+            "emp_id":"xxxx"
+          }
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+                {
+                  "employee":"successfuly added employee"
+                }
+
+/collect:
+  securedBy: [basic]
+  type:
+    col:
+       recordDescription : This API push DATA to CLM
+       recordType : application/json
+       recordExample : {"result":"success"}
