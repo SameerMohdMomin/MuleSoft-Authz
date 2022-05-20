@@ -5,7 +5,7 @@ http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/m
         <http:listener-connection host="0.0.0.0" port="8081" />
     </http:listener-config>
     <apikit:config name="employee-config" api="employee.raml" outboundHeadersMapName="outboundHeaders" httpStatusVarName="httpStatus" />
-    <api-gateway:autodiscovery apiId="17842927" ignoreBasePath="true" doc:name="API Autodiscovery" doc:id="d7fbf84b-dcc5-4461-8333-3e5dd28e84b1" flowRef="employee-main" />
+    <api-gateway:autodiscovery apiId="17845754" ignoreBasePath="true" doc:name="API Autodiscovery" doc:id="d7fbf84b-dcc5-4461-8333-3e5dd28e84b1" flowRef="employee-main" />
 	<flow name="employee-main">
         <http:listener config-ref="employee-httpListenerConfig" path="/api/*">
             <http:response statusCode="#[vars.httpStatus default 200]">
